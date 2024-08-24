@@ -4,7 +4,7 @@ html { scroll-behavior: smooth; }
 body{font-family: var(--primary-font-en); overflow-x: hidden;}
 
 /* header */
-header{height: 90px; display: flex; background-color: #000000; padding:0 24px; justify-content: space-between;}
+header{height: 90px; display: flex; background-color: #000000; padding:0 24px; justify-content: space-between; position: fixed; width: 100%; z-index: 999;}
 .menu{display: none;}
 .user-menu{display: none;}
 .header-mo{display: flex; justify-content: center; align-items: center;}
