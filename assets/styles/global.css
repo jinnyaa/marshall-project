@@ -21,10 +21,10 @@ footer{}
 
 
 /* git */
-.git{border-top: 1px solid #0000007c; padding: 50px 24px; display: flex; justify-content: end;}
-.git .go-to-git{width: 50px; height: 50px; border-radius: 50%; background-color: #000; margin-right: 20px;}
-.git .go-to-git a{width: 100%; height: 100%; display: block; position: relative;}
-.git .go-to-git img{position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);}
+.git{border-top: 1px solid #0000007c; padding: 50px 0; display: flex; justify-content: end; word-break: keep-all; }
+.git .go-to-git{width: 10%; height: 10%; border-radius: 50%; background-color: #000; margin-right: 20px;}
+.git .go-to-git a{width: 100%; height: 100%; display: block; position: relative; aspect-ratio: 1;}
+.git .go-to-git img{position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); width: 50%;}
 .git a{line-height: 50px; margin-right: 20px;}
 
 
