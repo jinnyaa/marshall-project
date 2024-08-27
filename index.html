@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <title>Marshall</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <!-- favicon -->
-    <!-- og -->
     <!-- reset css -->
     <link rel="stylesheet" href="./assets/styles/reset.css">
     <!-- fonts css -->
@@ -18,14 +16,18 @@
     <!-- jQuery -->
     <!-- js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- plugIn -->
+    <!-- plugin -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+
+
 
 </head>
 <body>
     <div class="main-bg"></div>
 
     <header>
-        <img src="./images/Marshall-logo.png" alt="logo">
+        <img src="./images/Marshall-logo.png" alt="logo" id="go-to-top">
         <ul class="menu">
             <li><a href="#">AMPS</a></li>
             <li><a href="#">Speakers</a></li>
@@ -33,7 +35,7 @@
             <li><a href="#">DRUMS</a></li>
             <li><a href="#">MERCH</a></li>
             <li><a href="#">BACKSTAGE</a></li>
-            <li><a href="#">ARTIST SERVICES</a></li>
+            <li><a href="#">ARTIST</a></li>
         </ul>
 
         <div class="user-menu">
@@ -44,9 +46,9 @@
                 </button>
             </form>
             
-            <a href="#"><i class="fa-regular fa-user" style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-regular fa-circle-question" style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-regular fa-user fa-lg" style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-regular fa-circle-question fa-lg" style="color: #ffffff;"></i></a>
         </div>
 
         <div class="header-mo">  
@@ -60,23 +62,27 @@
         <div class="main-container">
             <div class="main-img-container">
                 <ul class="main-img-box row1">
+                    <li data-delay="100">&nbsp;</li>
+                    <li data-delay="800">&nbsp;</li>
                     <li>&nbsp;</li>
+                    <li data-delay="1000">&nbsp;</li>
                     <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
+                    <li data-delay="600">&nbsp;</li>
+                    <li data-delay="300">&nbsp;</li>
                 </ul>
                 <ul class="main-img-box row2">
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li> 
+                    <li data-delay="600">&nbsp;</li>
+                    <li data-delay="500">&nbsp;</li>
+                    <li data-delay="300">&nbsp;</li> 
                 </ul>
             </div>
 
             <div class="main-txt-container">
-                <h1>Marshall</h1>
+                <div class="main-txt-title">
+                <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">Marshall</h1>
+                </div>
                 <div class="main-txt-wrap">
-                <div class="main-txt-box">
+                <div class="main-txt-box" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <div class="main-txt-row1">
                     <p>LEGENDARY SOUND,</p>
                     <p>BUILT FOR THE ROAD</p>
@@ -87,39 +93,39 @@
                     <h5>모든 공간을 채워보세요.</h5>
                     </div>
                 </div>
-                <h1>60 years of loud</h1>
+                <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">60 years of loud</h1>
                 </div>
             </div>
         </div>
         </section>
 
-        <section class="product-line">
+        <section class="product-line" >
+            <div class="product-title">
             <h2>마샬과 함께,</h2> <h2>당신의 음악에</h2> <h2>더 가까이 다가가세요.</h2>
+            </div>
 
             <div class="product amps">
                 <div class="product-txt-box">
                     <h2>AMPS</h2>
                     <h5>사운드에 힘을, 퍼포먼스에 감동을</h5>
-                    <p>앰프는 소리를 증폭시키고 음질과 볼륨을 향상시키는 공연의 심장 같은 존재입니다. 다양한 종류와 구성으로 혼자 연습하는 방부터 대규모 스테이지까지 모든 연주 상황에 필요한 요건을 충족시킵니다.</p>
+                    <p>앰프는 소리를 증폭시키고 음질과 볼륨을 향상시키는 공연의 심장 같은 존재입니다.<br> 다양한 종류와 구성으로 혼자 연습하는 방부터 대규모 스테이지까지<br> 모든 연주 상황에 필요한 요건을 충족시킵니다.</p>
                     <a href="#">45개의 제품 만나보기 ↗</a>
                 </div>
-                <div class="product-img-box">
-                    <img src="./images/product-amps1.jpg" alt="amps">
-                    <img src="./images/product-amps2.png" alt="amps">
+                <div class="product-img-box amps-img">
+                    <div class="product-img-1"></div>
+                    <div class="product-img-2"></div>
                 </div>
             </div>
 
             <div class="product speakers">
-                <div class="product-img-box">
-                    <img src="./images/product-speakers1.jpg" alt="speakers">
-                    <img src="./images/product-speakers2.jpg" alt="speakers">
+                <div class="product-img-box speakers-img">
+                    <div class="product-img-3"></div>
+                    <div class="product-img-4"></div>
                 </div>
                 <div class="product-txt-box">
                     <h2>SPEAKERS</h2>
                     <h5>집이나 이동 중에도 MARSHALL 사운드를 즐기세요.</h5>
-                    <p>이제 Marshall의 시그니처 사운드와 어디서든 함께 하세요. 
-                        끊김 없는 연결성과 긴 무선 재생시간이 주는 자유로움, 
-                        아이코닉한 사운드와 디자인까지 갖춘 스피커가 여러분을 기다리고 있습니다.</p>
+                    <p>이제 Marshall의 시그니처 사운드와 어디서든 함께 하세요.<br> 끊김 없는 연결성과 긴 무선 재생시간이 주는 자유로움,아이코닉한 사운드와 디자인까지 갖춘 스피커가 여러분을 기다리고 있습니다.</p>
                     <a href="#">19개의 제품 만나보기 ↗</a>
                 </div>
             </div>
@@ -128,12 +134,12 @@
                 <div class="product-txt-box">
                     <h2>HEADPHONES</h2>
                     <h5>언제 어디서나, 무대 앞에서 듣는 음악</h5>
-                    <p>와이어리스의 편리함, 유선의 안정성, 노이즈 캔슬링의 몰입감 기능 등 선호하는 조건에 맞는 완벽한 헤드폰이 여기에 있습니다.</p>
+                    <p>와이어리스의 편리함, 유선의 안정성, 노이즈 캔슬링의 몰입감 기능 등<br> 선호하는 조건에 맞는 완벽한 헤드폰이 여기에 있습니다.</p>
                     <a href="#">7개의 제품 만나보기 ↗</a>
                 </div>
-                <div class="product-img-box">
-                    <img src="./images/product-headphones1.jpg" alt="headphones">
-                    <img src="./images/product-headphones2.png" alt="headphones">
+                <div class="product-img-box headphones-img">
+                    <div class="product-img-5"></div>
+                    <div class="product-img-6"></div>
                 </div>
             </div>
         </section>
@@ -141,15 +147,20 @@
         <section class="spotlight">
             <div class="spotlight-title-box">
             <h2>IN THE SPOTLIGHT</h2>
-            <p>옆으로 스와이프해 다양한 이야기를 만나보세요.</p>
+            <p class="spotlight-mo">옆으로 스와이프해 다양한 이야기를 만나보세요.</p>
+            <p class="spotlight-pc">마샬의 다양한 이야기를 만나보세요</p>
             <div class="swipe">
-                <a href="#">swipe</a>
-                <a href="#"><img src="./images/spotlight-arrow.png" alt="go-to-spotlight"></a>
+                swipe
+                <img src="./images/spotlight-arrow.png" alt="go-to-spotlight">
             </div>
             </div>
 
             <div class="spotlight-wrapper">
                 <div class="scrolling-wrapper">
+                    <div class="spotlight-arrow">
+                        <a href="#" id="scroll-left"><i class="fa-solid fa-circle-chevron-right fa-flip-horizontal fa-2xl" style="color: #fff;"></i></a>
+                        <a href="#" id="scroll-right"><i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #fff;"></i></a>
+                    </div>
                     <div class="scroll-item spotlight1">
                         <div class="spotlight-box">
                         <h6>GUITAR HEROES</h6>
@@ -372,15 +383,15 @@
 
         <div class="policy">
             <ul>
-                <li>구매약관</li>
-                <li>이용약관</li>
-                <li>개인정보 보호정책</li>
-                <li>GDPR</li>
-                <li>보증정보</li>
-                <li>쿠키</li>
-                <li>보안</li>
-                <li>접근성</li>
-                <li>모든 정책</li>
+                <li><a href="#">구매약관</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보 보호정책</a></li>
+                <li><a href="#">GDPR</a></li>
+                <li><a href="#">보증정보</a></li>
+                <li><a href="#">쿠키</a></li>
+                <li><a href="#">보안</a></li>
+                <li><a href="#">접근성</a></li>
+                <li><a href="#">모든 정책</a></li>
             </ul>
         </div>
 
