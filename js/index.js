@@ -62,37 +62,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // instagram slide
 $(document).ready(function(){
-  $slides = $('.go-to-ig-slide');
-  $slides2 = $('.go-to-ig-slide2');
+  const parts = document.querySelectorAll(".go-to-ig-part, .go-to-ig-part2");
+  const roots = document.querySelectorAll(".go-to-ig-root");
+  const scrollContainers = document.querySelectorAll(".go-to-ig-scroll, .go-to-ig-scroll2");
   
-  $slides.bind('contentchanged', function(){
-      animate($slides);
+  parts.forEach((part, index) => {
+    const root = roots[index];
+    const scrollContainer = scrollContainers[index];
+  
+    const partWidth = part.clientWidth;
+  
+    scrollContainer.style.width = `${partWidth}px`;
+  
+    if (part.classList.contains('go-to-ig-part')) {
+      scrollContainer.style.animationName = "scroll";
+    } else if (part.classList.contains('go-to-ig-part2')) {
+      scrollContainer.style.animationName = "scroll-reverse";
+    }
+  
+    const partClons = [];
+  
+    const updatePartCount = _.throttle(function () {
+      const rootWidth = root.clientWidth;
+      const cloneCount = Math.floor(rootWidth / partWidth);
+  
+      if (cloneCount > partClons.length) {
+        const addCount = cloneCount - partClons.length;
+  
+        [...Array(addCount)].forEach(() => {
+          const newNode = part.cloneNode(true);
+          partClons.push(newNode);
+          scrollContainer.appendChild(newNode);
+        });
+      }
+  
+      if (cloneCount < partClons.length) {
+        const removeCount = partClons.length - cloneCount;
+  
+        [...Array(removeCount)].forEach(() => {
+          const oldNode = partClons.pop();
+          scrollContainer.removeChild(oldNode);
+        });
+      }
+    }, 200);
+  
+    updatePartCount();
+  
+    window.addEventListener('resize', updatePartCount);
   });
-  animate($slides);
-
-  $slides2.bind('contentchanged', function(){
-      animateReverse($slides2);
-  });
-  animateReverse($slides2);
 });
 
-function animate($slides){
-  var slidesLength = $slides.find('li').length;
-  if(slidesLength > 3){
-      $slides.find('li:nth-last-child(-n+3)').clone().prependTo($slides);
-      $slides.addClass('animate');
-      $slides.css('animation-duration', slidesLength * 2 + 's');
-  }
-}
 
-function animateReverse($slides2){
-  var slidesLength2 = $slides2.find('li').length;
-  if(slidesLength2 > 3){
-      $slides2.find('li:nth-last-child(-n+3)').clone().prependTo($slides2);
-      $slides2.addClass('animate2');
-      $slides2.css('animation-duration', slidesLength2 * 2 + 's');
-  }
-}
 
 
 // footer menu toggle
