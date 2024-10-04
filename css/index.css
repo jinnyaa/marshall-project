@@ -180,15 +180,15 @@
 
   .newsletter {background-color: #000; color: #fff; padding: 24px; width: 100%; position: relative; font-family: var(--primary-font-ko);}
   .newsletter-title{width: 60%; font-size: var(--title-size-sxxx);  position: relative; height: 100%; margin-bottom: 30px;}
-  .newsletter-title h2{font-weight: 200; line-height: 1.5; margin-top: 24px;}
+  .newsletter-title h2{font-weight: 200; line-height: 1.5; margin-top: 24px; word-break: keep-all;}
   .newsletter-title img{position: absolute; width: 15%;}
   .newsletter-title img:nth-child(2){top:15%; right: 0;}
   .newsletter-title img:nth-child(3){top: 55%; left: 25%; width: 20%;}
   .newsletter form input{background-color: #393939; filter: drop-shadow(0); color: #fff; padding: 1%; width: 55%; border: 0; font-size: var(--desc-size-sm);}
   .newsletter form .newsletter-btn{padding: 1%; border-radius: 0; border: 0; font-size: var(--desc-size-sm); margin-left: 1%; cursor: pointer;}
   .newsletter .newsletter-policy{margin: 2% 0; display: flex; font-size: var(--desc-size-sxx); color: #838383; width: 100%;}
-  .newsletter .newsletter-policy p{margin-right: 1%;}
-  .newsletter .newsletter-policy a{border-bottom: 1px solid #838383; margin-bottom: 80px;}
+  .newsletter .newsletter-policy p{margin-right: 1%; font-size: var(--desc-size-sxx);}
+  .newsletter .newsletter-policy a{border-bottom: 1px solid #838383; margin-bottom: 80px; font-size: var(--desc-size-sxx);}
   .newsletter .newsletter-logo{width: fit-content; position: absolute; right: 0; bottom: 0; display: flex; flex-flow: row-reverse; margin-bottom: 10px;}
   .newsletter .newsletter-logo img{width: 40%; filter: opacity(20%);}
 
@@ -366,38 +366,40 @@ footer{padding: 24px; background-color: #fff;}
     /* go-to-ig */
     .go-to-ig{margin: 10% auto; }
 
+      /* newsletter */
+      .newsletter{padding: 5%;}
+      .newsletter-title img{display: none;}
+      .newsletter-title{margin-bottom: 3%;}
+      .newsletter .newsletter-policy{font-size: var(--desc-size-md);}
+  
+      /* footer */
+      .footer-menu-container{padding-top: 3%; display: flex; justify-content: space-between; margin: 0 3%;}
+  
+      .footer-menu-container p{font-size: var(--desc-size-md); padding: 0; line-height: 3;}
+      .footer-menu.footer-menu1{margin-bottom: 0;}
+      .footer-menu{min-width: fit-content; width: 10vw;}
+      .footer-menu.footer-menu1 .footer-title{font-size: var(--desc-size-md);}
+      .footer-menu.footer-menu1 a{font-size: var(--desc-size-md);}
+  
+      .footer-menu{border:none; padding: 0;}
+      .footer-menu:last-child{border-bottom: none;}
+      .footer-menu ul{display: block;}
+      .footer-menu ul.toggleOn{display: none;}
+  
+      .toggle-icon{display: none;}
+  
+      .footer-menu ul li{margin-left: 0; line-height: 1.8;}
+      .footer-menu ul li:first-child{margin-top: 20px;}
+      .footer-menu ul li:last-child{margin-bottom: 20px;}
+      .footer-menu i{margin-right: 10px;}
+      .footer-menu1{min-width: fit-content; width: 30vw;}
+  
+      .policy{margin: 5% 3% 30px; font-size: var(--desc-size-md); }
+  
+
   }
 
 
-      /* newsletter */
-    .newsletter{padding: 5%;}
-    .newsletter-title img{display: none;}
-    .newsletter-title{margin-bottom: 3%;}
-    .newsletter .newsletter-policy{font-size: var(--desc-size-md);}
-
-    /* footer */
-    .footer-menu-container{padding-top: 3%; display: flex; justify-content: space-between; margin: 0 3%;}
-
-    .footer-menu-container p{font-size: var(--desc-size-md); padding: 0; line-height: 3;}
-    .footer-menu.footer-menu1{margin-bottom: 0;}
-    .footer-menu{min-width: fit-content; width: 10vw;}
-    .footer-menu.footer-menu1 .footer-title{font-size: var(--desc-size-md);}
-    .footer-menu.footer-menu1 a{font-size: var(--desc-size-md);}
-
-    .footer-menu{border:none; padding: 0;}
-    .footer-menu:last-child{border-bottom: none;}
-    .footer-menu ul{display: block;}
-    .footer-menu ul.toggleOn{display: none;}
-
-    .toggle-icon{display: none;}
-
-    .footer-menu ul li{margin-left: 0; line-height: 1.8;}
-    .footer-menu ul li:first-child{margin-top: 20px;}
-    .footer-menu ul li:last-child{margin-bottom: 20px;}
-    .footer-menu i{margin-right: 10px;}
-    .footer-menu1{min-width: fit-content; width: 30vw;}
-
-    .policy{margin: 5% 3% 30px; font-size: var(--desc-size-md); }
-
- }
+    
+ 
  
